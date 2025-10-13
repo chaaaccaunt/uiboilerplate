@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed } from "vue";
+import { useRoute } from "vue-router";
 import Main from "./layouts/Main.vue";
 import Auth from "./layouts/Auth.vue";
-import { useRoute } from "vue-router";
 
 const route = useRoute();
 
@@ -15,7 +15,7 @@ const layouts = computed(() => components[route.meta.layout]);
 </script>
 
 <template>
-  <component :is=""></component>
+  <component :is="layouts"></component>
 </template>
 
 <style lang="scss">
